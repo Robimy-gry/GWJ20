@@ -36,7 +36,6 @@ func calculate_move_velocity(
     out.x = speed.x * dir.x
     out.y += gravity * get_physics_process_delta_time()
     return out
-    
      
 
 func flip_sprite(dir):
