@@ -7,3 +7,7 @@ export var speed: = Vector2(300.0,500.0)
 export var gravity: = 2000.0
 
 var _velocity: = Vector2.ZERO
+
+
+func flip_sprite(dir):
+        $AnimatedSprite.flip_h = true if dir.x < 0 else false 

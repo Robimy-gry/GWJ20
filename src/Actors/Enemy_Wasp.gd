@@ -14,13 +14,9 @@ func _physics_process(delta: float) -> void:
 
 
 func get_direction(dir) -> Vector2:
-    if is_on_wall():
-        dir.x = dir.x * -1
-        $RayCast2D.position.x *= -1
-
-    if $RayCast2D.is_colliding() == false:
+    if is_on_wall() or $RayCast2D.is_colliding() == false:
         dir.x = -dir.x
-        $RayCast2D.position.x *= -1 
+        $RayCast2D.position.x *= -1
         
     return dir
 
@@ -37,9 +33,3 @@ func calculate_move_velocity(
     out.y += gravity * get_physics_process_delta_time()
     return out
      
-
-func flip_sprite(dir):
-    if dir.x < 0:
-        $AnimatedSprite.flip_h = true 
-    else: 
-        $AnimatedSprite.flip_h = false

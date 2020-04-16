@@ -30,10 +30,3 @@ func calculate_move_velocity(
     if is_jump_interrupted:
         out.y = 0.0
     return out
-    
-func flip_sprite(direction):
-    
-    if direction.x < 0:
-        $AnimatedSprite.flip_h = true 
-    else: 
-        $AnimatedSprite.flip_h = false
