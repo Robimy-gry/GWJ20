@@ -1,7 +1,7 @@
 extends Node
 
 var playerTypes = ["Human", "Wasp", "Worm", "Plant"]
-var playerType = "Wasp"
+var playerType = "Player"
 
 
 func _ready() -> void:

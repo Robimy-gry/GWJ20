@@ -2,6 +2,7 @@ extends Actor
 
 func _ready() -> void:
     self.speed.y = 300
+    add_to_group("Player")
 
 
 func _physics_process(delta: float) -> void:
@@ -26,3 +27,8 @@ func calculate_move_velocity(
     var out: = linear_velocity
     out = speed * direction
     return out
+
+
+func _on_Area2D_body_entered(body: Node) -> void:
+    killed_by(body)
+                

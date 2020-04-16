@@ -3,6 +3,8 @@ extends Actor
 var direction: = Vector2(1,0)
 
 func _ready() -> void:
+    add_to_group("Wasp")
+    add_to_group("Enemy")
     self.speed.y = 300
 
 

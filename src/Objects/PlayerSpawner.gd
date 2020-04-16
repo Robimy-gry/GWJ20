@@ -6,6 +6,7 @@ var player_wasp_scene = preload("res://src/Actors/Player_Wasp.tscn")
 
 func _ready():
     instance_player()
+    add_to_group("Player_Spawner")
 
 
 func instance_player():
