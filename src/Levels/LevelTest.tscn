@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Enemy_Wasp.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/Player_Human.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Levels/LevelTest.gd" type="Script" id=4]
 
 [node name="LevelTest" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Player_Human" parent="." instance=ExtResource( 3 )]
 position = Vector2( 53.1571, 362.816 )
