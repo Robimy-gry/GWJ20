@@ -37,7 +37,7 @@ func calculate_move_velocity(
     out.y += gravity * get_physics_process_delta_time()
     return out
     
-     
+    
 
 func flip_sprite(dir):
     if dir.x < 0:
