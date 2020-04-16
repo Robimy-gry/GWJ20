@@ -10,9 +10,12 @@ func _ready():
 
 func instance_player():
     var player
-    if GlobalWorld.playerType == "Wasp":
-        player = player_wasp_scene.instance()
-        add_child(player)
-    else:
+    if GlobalWorld.playerType == "Human":
         player = player_human_scene.instance()
-        add_child(player)
+    elif GlobalWorld.playerType == "Wasp":
+        player = player_wasp_scene.instance()
+    else:
+        print("playerType not known: ", GlobalWorld.playerType)
+        print("Please check: PlayerSpawner.gd -> instance_player()")
+        player = player_human_scene.instance()
+    add_child(player)
