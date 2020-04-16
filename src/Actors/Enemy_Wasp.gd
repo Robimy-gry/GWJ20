@@ -17,7 +17,7 @@ func get_direction(dir) -> Vector2:
     if is_on_wall() or $RayCast2D.is_colliding() == false:
         dir.x = -dir.x
         $RayCast2D.position.x *= -1
-        
+     
     return dir
 
 
