@@ -31,5 +31,4 @@ func calculate_move_velocity(
     var out: = linear_velocity
     out.x = speed.x * dir.x
     out.y += gravity * get_physics_process_delta_time()
-    return out
-     
+    return out   

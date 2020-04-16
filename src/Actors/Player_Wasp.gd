@@ -26,6 +26,3 @@ func calculate_move_velocity(
     var out: = linear_velocity
     out = speed * direction
     return out
-
-func flip_sprite(direction):
-    
