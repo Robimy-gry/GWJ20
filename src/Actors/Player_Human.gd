@@ -4,6 +4,7 @@ extends Actor
 func _physics_process(delta: float) -> void:
     var is_jump_interrupted: = Input.is_action_just_released("ui_up") and _velocity.y < 0.0
     var direction: = get_direction() 
+    flip_sprite(direction)
     _velocity = calculate_move_velocity(_velocity,direction, speed, is_jump_interrupted)
     _velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 
@@ -29,3 +30,10 @@ func calculate_move_velocity(
     if is_jump_interrupted:
         out.y = 0.0
     return out
+    
+func flip_sprite(direction):
+    
+    if direction.x < 0:
+        $AnimatedSprite.flip_h = true 
+    else: 
+        $AnimatedSprite.flip_h = false
