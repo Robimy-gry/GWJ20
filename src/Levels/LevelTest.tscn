@@ -2,14 +2,13 @@
 
 [ext_resource path="res://Assets/Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Enemy_Wasp.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Actors/Player_Human.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Levels/LevelTest.gd" type="Script" id=4]
+[ext_resource path="res://src/Objects/PlayerSpawner.tscn" type="PackedScene" id=3]
 
 [node name="LevelTest" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="Player_Human" parent="." instance=ExtResource( 3 )]
-position = Vector2( 53.1571, 362.816 )
+[node name="PlayerSpawner" parent="." instance=ExtResource( 3 )]
+position = Vector2( 66, 360 )
 
 [node name="Enemy_Wasp" parent="." instance=ExtResource( 2 )]
 position = Vector2( 367.812, 79.7388 )
@@ -18,6 +17,7 @@ position = Vector2( 367.812, 79.7388 )
 position = Vector2( 394.391, 360.099 )
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -8, 0 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1

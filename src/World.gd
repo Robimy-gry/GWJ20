@@ -1,12 +1,10 @@
 extends Node
 
 var playerTypes = ["Human", "Wasp", "Worm", "Plant"]
-var playerType
+var playerType = "Wasp"
 
 func _ready() -> void:
-	playerType = "Human"
+    pass
 
 func _physics_process(delta: float) -> void:
 			pass
-
-
