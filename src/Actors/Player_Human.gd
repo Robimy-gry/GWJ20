@@ -1,4 +1,8 @@
 extends Actor
+class_name Player
+
+func _ready() -> void:
+	add_to_group("Player")
 
 
 func _physics_process(delta: float) -> void:
@@ -30,3 +34,9 @@ func calculate_move_velocity(
 	if is_jump_interrupted:
 		out.y = 0.0
 	return out
+
+func get_camera_instance():
+	return $Camera2D
+
+func _on_Area2D_body_entered(body: Node) -> void:
+	killed_by(body)

@@ -6,7 +6,9 @@ func _ready():
 func set_camera_limits():
 	var map_limits = $TileMap.get_used_rect()
 	var map_cellsize = $TileMap.cell_size
-	$Player_Human/Camera2D.limit_left = map_limits.position.x * map_cellsize.x
-	$Player_Human/Camera2D.limit_right = map_limits.end.x * map_cellsize.x
-	$Player_Human/Camera2D.limit_top = map_limits.position.y * map_cellsize.y
-	$Player_Human/Camera2D.limit_bottom = map_limits.end.y * map_cellsize.y
+	var player: Player = $PlayerSpawner.get_player_instance()
+	player.get_camera_instance().limit_left = map_limits.position.x * map_cellsize.x
+	player.get_camera_instance().limit_right = map_limits.end.x * map_cellsize.x
+	player.get_camera_instance().limit_top = map_limits.position.y * map_cellsize.y
+	player.get_camera_instance().limit_bottom = map_limits.end.y * map_cellsize.y
+

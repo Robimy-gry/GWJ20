@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Actor",
 "language": "GDScript",
 "path": "res://src/Actors/Actor.gd"
+}, {
+"base": "Actor",
+"class": "Player",
+"language": "GDScript",
+"path": "res://src/Actors/Player_Human.gd"
 } ]
 _global_script_class_icons={
-"Actor": ""
+"Actor": "",
+"Player": ""
 }
 
 [application]
@@ -35,6 +41,12 @@ window/size/test_width=1024
 window/size/test_height=768
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemy"
+2d_physics/layer_3="World"
 
 [rendering]
 
