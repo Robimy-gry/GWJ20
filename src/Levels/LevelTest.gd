@@ -2,7 +2,7 @@ extends Node2D
 
 func _ready():
 	add_to_group("Level")
-	get_tree().call_group("Level", "set_camera_limits")
+	set_camera_limits()
 	
 
 func set_camera_limits():
