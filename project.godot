@@ -36,6 +36,12 @@ window/size/test_height=768
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemy"
+2d_physics/layer_3="World"
+
 [rendering]
 
 quality/2d/use_pixel_snap=true

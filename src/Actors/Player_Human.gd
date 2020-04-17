@@ -1,6 +1,10 @@
 extends Actor
 
 
+func _ready() -> void:
+    add_to_group("Player")
+
+
 func _physics_process(delta: float) -> void:
     var is_jump_interrupted: = Input.is_action_just_released("ui_up") and _velocity.y < 0.0
     var direction: = get_direction() 
@@ -30,3 +34,7 @@ func calculate_move_velocity(
     if is_jump_interrupted:
         out.y = 0.0
     return out
+
+
+func _on_Area2D_body_entered(body: Node) -> void:
+    killed_by(body)
