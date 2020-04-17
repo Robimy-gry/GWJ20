@@ -3,7 +3,8 @@ class_name Player
 
 func _ready() -> void:
 	add_to_group("Player")
-
+	get_tree().call_group("Level", "set_camera_limits")
+	
 
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("ui_up") and _velocity.y < 0.0
