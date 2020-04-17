@@ -10,4 +10,4 @@ var _velocity: = Vector2.ZERO
 
 
 func flip_sprite(dir):
-        $AnimatedSprite.flip_h = true if dir.x < 0 else false 
+	$AnimatedSprite.flip_h = true if dir.x < 0 else false 

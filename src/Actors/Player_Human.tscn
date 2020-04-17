@@ -66,3 +66,8 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3 )
 shape = SubResource( 9 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.6, 0.6 )
+smoothing_enabled = true
