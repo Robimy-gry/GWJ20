@@ -3,6 +3,7 @@ extends Actor
 func _ready() -> void:
 	self.speed.y = 300
 	add_to_group("Player")
+	get_tree().call_group("Level", "set_camera_limits")
 
 
 func _physics_process(delta: float) -> void:
@@ -27,6 +28,10 @@ func calculate_move_velocity(
 	var out: = linear_velocity
 	out = speed * direction
 	return out
+	
+	
+func get_camera_instance():
+	return $Camera2D
 
 
 func _on_Area2D_body_entered(body: Node) -> void:
