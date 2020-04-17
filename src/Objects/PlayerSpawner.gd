@@ -20,3 +20,7 @@ func instance_player():
         print("Please check: PlayerSpawner.gd -> instance_player()")
         player = player_human_scene.instance()
     add_child(player)
+
+func get_coordinates() -> void:
+    self.position = get_child(0).global_position
+    
