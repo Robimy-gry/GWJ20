@@ -36,6 +36,6 @@ func killed_by(body: KinematicBody2D) -> void:
 
 func die():
 	if self.is_in_group("Player"):
-		get_tree().call_group("Player_Spawner", "get_coordinates")
+		get_tree().call_group("Player_Spawner", "set_coordinates_from_child")
 		get_tree().call_group("Player_Spawner", "instance_player")
 	queue_free()
