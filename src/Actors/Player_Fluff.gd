@@ -3,6 +3,7 @@ extends Actor
 
 func _ready() -> void:
 	add_to_group("Player")
+	get_tree().call_group("Level", "set_camera_limits")
 	self.speed.x = 30
 	self.speed.y = -25
 	self.gravity = 5

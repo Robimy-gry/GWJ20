@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Enemy_Wasp.tscn" type="PackedScene" id=2]
@@ -7,12 +7,18 @@
 [ext_resource path="res://src/Actors/Enemy_Plant.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Levels/Level_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actors/Enemy_Worm.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Objects/WormHole.tscn" type="PackedScene" id=9]
 
 [node name="LevelTest" type="Node2D"]
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 368.0 ],
+"_edit_vertical_guides_": [ 592.0 ]
+}
 
 [node name="PlayerSpawner" parent="." instance=ExtResource( 3 )]
-position = Vector2( 66, 360 )
+position = Vector2( 176, 340 )
 
 [node name="Enemy_Wasp" parent="." instance=ExtResource( 2 )]
 position = Vector2( 367.812, 79.7388 )
@@ -22,6 +28,9 @@ position = Vector2( 394.391, 360.099 )
 
 [node name="Enemy_Plant" parent="." instance=ExtResource( 5 )]
 position = Vector2( 48, 144 )
+
+[node name="Enemy_Worm" parent="." instance=ExtResource( 8 )]
+position = Vector2( 104, 368 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -8, 0 )
@@ -35,3 +44,11 @@ tile_data = PoolIntArray( -131074, 1, 0, -131073, 2, 0, -196608, 2, 0, -196607, 
 [node name="Portal2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 523, 80 )
 next_scene = ExtResource( 7 )
+
+[node name="wh1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 592, 368 )
+next_worm_hole_name = "wh2"
+
+[node name="wh2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 48, 368 )
+next_worm_hole_name = "wh1"
