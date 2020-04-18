@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Assets/Sprites/wasp.png" type="Texture" id=1]
-[ext_resource path="res://src/Actors/Enemy_Wasp.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/plant-Sheet.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Enemy_Plant.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -23,21 +23,20 @@ region = Rect2( 32, 32, 32, 32 )
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
-"name": "fly",
+"name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 3 ) ],
-"loop": false,
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
 "name": "attack",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=6]
-radius = 11.0
-height = 10.0
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 16, 12 )
 
-[node name="Enemy_Wasp" type="KinematicBody2D"]
-position = Vector2( 0, -12 )
+[node name="Enemy_Plant" type="KinematicBody2D"]
+position = Vector2( 0, -16 )
 collision_layer = 2
 collision_mask = 4
 script = ExtResource( 2 )
@@ -46,18 +45,10 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -4 )
 frames = SubResource( 5 )
-animation = "fly"
-frame = 1
+animation = "idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -4 )
+position = Vector2( 0, 4 )
 shape = SubResource( 6 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 8, -4 )
-enabled = true
-cast_to = Vector2( 0, 30 )
-collision_mask = 4
