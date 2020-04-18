@@ -13,4 +13,3 @@ func set_camera_limits():
 	player.get_camera_instance().limit_right = map_limits.end.x * map_cellsize.x
 	player.get_camera_instance().limit_top = map_limits.position.y * map_cellsize.y
 	player.get_camera_instance().limit_bottom = map_limits.end.y * map_cellsize.y
-
