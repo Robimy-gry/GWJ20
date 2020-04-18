@@ -6,6 +6,7 @@ var player_fluff_scene = preload("res://src/Actors/Player_Fluff.tscn")
 
 func _ready() -> void:
 	add_to_group("Player")
+	get_tree().call_group("Level", "set_camera_limits")
 	
 
 func _physics_process(delta: float) -> void:

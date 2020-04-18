@@ -12,6 +12,7 @@ func teleport() -> void:
 	anim_player.play("fade-in")
 	yield(anim_player, "animation_finished")
 	get_tree().change_scene_to(next_scene)
+	GlobalWorld.playerType = "Human"
 
 
 func _on_Portal2D_body_entered(body: Node) -> void:
