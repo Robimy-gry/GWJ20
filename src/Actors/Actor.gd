@@ -29,6 +29,7 @@ func killed_by(body: KinematicBody2D) -> void:
 			var enemy_anim = body.get_node("AnimatedSprite")
 			enemy_anim.play("attack")
 			yield(enemy_anim, "animation_finished")
+			get_tree().call_group("Quotes", "show_quote")
 			body.die()
 			die()
 			break
