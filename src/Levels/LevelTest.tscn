@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Enemy_Wasp.tscn" type="PackedScene" id=2]
@@ -7,9 +7,12 @@
 [ext_resource path="res://src/Actors/Enemy_Plant.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Levels/Level_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Objects/QuoteScene.tscn" type="PackedScene" id=8]
 
 [node name="LevelTest" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="QuoteScene" parent="." instance=ExtResource( 8 )]
 
 [node name="PlayerSpawner" parent="." instance=ExtResource( 3 )]
 position = Vector2( 66, 360 )

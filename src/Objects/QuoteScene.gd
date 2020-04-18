@@ -5,6 +5,7 @@ onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 func _ready():
 	add_to_group("Quotes")
+	#show_quote()
 	#select_quote()
 	
 func _physics_process(delta):
@@ -26,11 +27,15 @@ func get_from_json(filename):
 	file.close()
 	return data
 
+
 func show_quote():
+	get_tree().paused = true
 	select_quote()
 	anim_player.play("fade-in")
 	yield(anim_player, "animation_finished")
 
+
 func next_scene():
 	if Input.is_action_just_pressed("ui_select"):
 		anim_player.play("Start")
+		get_tree().paused = false
