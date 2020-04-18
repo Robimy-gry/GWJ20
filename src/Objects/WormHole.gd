@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_down") and is_activated:
-		teleport(player.get_parent())
+		teleport(player)
 
 
 func _get_configuration_warning() -> String:
@@ -21,7 +21,7 @@ func _get_configuration_warning() -> String:
 func teleport(body) -> void:
 	var next_worm_hole = get_tree().get_root().find_node(next_worm_hole_name, true, false)
 	if next_worm_hole != null:
-		body.position = next_worm_hole.get_position()
+		body.global_position = next_worm_hole.get_position()
 
 
 func _on_WormHole_body_entered(body: Node) -> void:
