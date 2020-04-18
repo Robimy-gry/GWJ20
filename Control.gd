@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 var current_quote
 
@@ -14,8 +14,8 @@ func select_quote():
 	var quotes = get_from_json("quotes.json")
 	randomize()
 	current_quote = quotes[randi() % quotes.size()]
-	$VBoxContainer/Quote.text = "\"" + current_quote.quote + "\""
-	$VBoxContainer/Author.text = current_quote.author
+	$ColorRect/VBoxContainer/Quote.text = "\"" + current_quote.quote + "\""
+	$ColorRect/VBoxContainer/Author.text = current_quote.author
 
 
 func get_from_json(filename):
