@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mount-tileset.png-160b9264cf7fa7b7ca4acec476dd7fad.stex"
+path="res://.import/sign.png-3b78e16a8975d5e3019584ab37a27311.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/mount-tileset.png"
-dest_files=[ "res://.import/mount-tileset.png-160b9264cf7fa7b7ca4acec476dd7fad.stex" ]
+source_file="res://Assets/Sprites/sign.png"
+dest_files=[ "res://.import/sign.png-3b78e16a8975d5e3019584ab37a27311.stex" ]
 
 [params]
 
