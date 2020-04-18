@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Gwj 20"
-run/main_scene="res://src/Levels/LevelTest.tscn"
+run/main_scene="res://src/Levels/Level_1.tscn"
 
 [autoload]
 
