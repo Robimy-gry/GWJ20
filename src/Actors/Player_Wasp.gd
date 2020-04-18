@@ -35,5 +35,4 @@ func get_camera_instance():
 
 
 func _on_Area2D_body_entered(body: Node) -> void:
-	killed_by(body)
-				
+	killed_by(body)	

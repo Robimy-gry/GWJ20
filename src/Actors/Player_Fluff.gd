@@ -37,3 +37,6 @@ func calculate_move_velocity(
 
 func _on_Area2D_body_entered(body: Node) -> void:
 	killed_by(body)
+	
+func get_camera_instance():
+	return $Camera2D

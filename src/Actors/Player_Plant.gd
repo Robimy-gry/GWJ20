@@ -43,3 +43,6 @@ func _on_Area2D_body_entered(body: Node) -> void:
 
 func _on_FluffTimer_timeout() -> void:
 	die()
+	
+func get_camera_instance():
+	return $Camera2D
