@@ -38,7 +38,8 @@ func calculate_move_velocity(
 
 
 func _on_Area2D_body_entered(body: Node) -> void:
-	killed_by(body)
+	if hasFired == false:
+		killed_by(body)
 
 
 func _on_FluffTimer_timeout() -> void:
