@@ -24,7 +24,7 @@ func instance_player():
 		player = player_human_scene.instance()
 	add_child(player)
 
-func get_coordinates() -> void:
+func set_coordinates_from_child() -> void:
 	self.position = get_child(0).global_position
 	
 	

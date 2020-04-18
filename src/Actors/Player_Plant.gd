@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 func fire_fluff():
 	$Camera2D.queue_free()
 	var player = player_fluff_scene.instance()
+	get_parent().set_coordinates_from_child()
 	get_parent().add_child(player)
 	remove_from_group("Player")
 	$FluffTimer.start()
