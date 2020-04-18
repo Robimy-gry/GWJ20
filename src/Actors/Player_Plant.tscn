@@ -44,7 +44,6 @@ collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="FluffTimer" type="Timer" parent="."]
-wait_time = 3.0
 one_shot = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
