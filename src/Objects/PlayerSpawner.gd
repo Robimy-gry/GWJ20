@@ -16,6 +16,8 @@ func instance_player():
 		player = player_human_scene.instance()
 	elif GlobalWorld.playerType == "Wasp":
 		player = player_wasp_scene.instance()
+	elif GlobalWorld.playerType == "Plant":
+		player = player_plant_scene.instance()
 	else:
 		print("playerType not known: ", GlobalWorld.playerType)
 		print("Please check: PlayerSpawner.gd -> instance_player()")
