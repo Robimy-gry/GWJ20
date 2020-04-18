@@ -7,6 +7,7 @@ func _ready() -> void:
 	self.speed.y = -25
 	self.gravity = 5
 	_velocity.y = self.speed.y
+	self.position.y += 16
 
 func _physics_process(delta: float) -> void:
 	var direction: = get_direction() 
