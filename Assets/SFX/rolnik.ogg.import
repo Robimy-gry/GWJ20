@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rolnik.ogg-f9bf42a9231b4b15e32d1c481858d9d5.oggstr"
+
+[deps]
+
+source_file="res://Assets/SFX/rolnik.ogg"
+dest_files=[ "res://.import/rolnik.ogg-f9bf42a9231b4b15e32d1c481858d9d5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
