@@ -2,8 +2,8 @@ extends AudioStreamPlayer
 
 var humanSFX = "res://Assets/SFX/rolnik.ogg"
 var waspSFX = "res://Assets/SFX/osa_vibrato.ogg"
-var wormSFX = "res://Assets/SFX/robak.ogg"
-var plantSFX = "res://Assets/SFX/plant.ogg"
+var wormSFX = "res://Assets/SFX/plant.ogg"
+var plantSFX = "res://Assets/SFX/robak.ogg"
 
 func _ready() -> void:
 	add_to_group("AudiostreamPlayer")
