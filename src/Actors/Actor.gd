@@ -20,19 +20,20 @@ func flip_sprite(dir):
 
 
 func killed_by(body: KinematicBody2D) -> void:
-	var groups_list = body.get_groups()
-	for name in GlobalWorld.playerTypes:
-		if body.is_in_group(name) and name != "Human":
-			GlobalWorld.playerType = name
-			self.freeze = true
-			body.freeze = true
-			var enemy_anim = body.get_node("AnimatedSprite")
-			enemy_anim.play("attack")
-			yield(enemy_anim, "animation_finished")
-			get_tree().call_group("Quotes", "show_quote")
-			body.die()
-			die()
-			break
+	if body != null and body.get_class() == 'KinematicBody2D':
+		var groups_list = body.get_groups()
+		for name in GlobalWorld.playerTypes:
+			if body.is_in_group(name) and name != "Human":
+				GlobalWorld.playerType = name
+				self.freeze = true
+				body.freeze = true
+				var enemy_anim = body.get_node("AnimatedSprite")
+				enemy_anim.play("attack")
+				yield(enemy_anim, "animation_finished")
+				get_tree().call_group("Quotes", "show_quote")
+				body.die()
+				die()
+				break
 	
 
 func die():

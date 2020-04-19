@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Objects/PlayerSpawner.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://src/Actors/Enemy_Plant.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/QuoteScene.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Levels/Level_2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Levels/MarioLevel.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Objects/SecretPortal.tscn" type="PackedScene" id=10]
 
 [node name="Level_1" type="Node2D"]
 
@@ -34,7 +36,7 @@ tile_data = PoolIntArray( -458700, 27, 0, -458699, 27, 0, -458698, 27, 0, -45869
 position = Vector2( 1771.92, 162.974 )
 
 [node name="Enemy_Wasp2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2144.4, 562.554 )
+position = Vector2( 2021.19, 566.374 )
 
 [node name="Enemy_Plant2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2550.62, 477.095 )
@@ -45,3 +47,7 @@ position = Vector2( 2647.5, 472.238 )
 [node name="Portal2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2839.9, 479.293 )
 next_scene = ExtResource( 8 )
+
+[node name="SecretPortal" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2388.43, -156.856 )
+next_scene = ExtResource( 9 )
