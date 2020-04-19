@@ -124,7 +124,7 @@ margin_right = 129.762
 margin_bottom = 99.6322
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 0.976471 )
-text = "Don't Bee Plant,
+text = "Don't Bee a Plant,
 always Worm up!"
 align = 1
 valign = 1

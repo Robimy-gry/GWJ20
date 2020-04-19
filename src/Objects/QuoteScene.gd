@@ -12,7 +12,7 @@ func _physics_process(delta):
 	next_scene()
 
 func select_quote():
-	var quotes = get_from_json("quotes.json")
+	var quotes = get_from_json("res://quotes.json")
 	randomize()
 	current_quote = quotes[randi() % quotes.size()]
 	$ColorRect/VBoxContainer/Quote.text = "\"" + current_quote.quote + "\""

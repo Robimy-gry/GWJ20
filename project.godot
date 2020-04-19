@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Gwj 20"
+config/name="Don't Bee a Plant, always Worm up!"
 run/main_scene="res://src/Objects/TitleScene.tscn"
 
 [autoload]
