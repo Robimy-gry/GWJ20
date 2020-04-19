@@ -1,9 +1,11 @@
 extends Actor
-class_name Player
+
 
 func _ready() -> void:
 	add_to_group("Player")
 	get_tree().call_group("Level", "set_camera_limits")
+	self.speed.x = 100
+	self.speed.y = 400
 	
 
 func _physics_process(delta: float) -> void:
@@ -12,9 +14,7 @@ func _physics_process(delta: float) -> void:
 	flip_sprite(direction)
 	_velocity = calculate_move_velocity(_velocity,direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
-	if !is_on_floor():
-		$AnimatedSprite.play("jump")
-	elif _velocity.x != 0:
+	if _velocity.x != 0:
 		$AnimatedSprite.play("move")
 	else:
 		$AnimatedSprite.play("idle")

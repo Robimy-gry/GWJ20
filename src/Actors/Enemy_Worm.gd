@@ -3,9 +3,9 @@ extends Actor
 var direction: = Vector2(1,0)
 
 func _ready() -> void:
-	add_to_group("Wasp")
+	add_to_group("Worm")
 	self.speed.y = 300
-	self.speed.x = 150
+	self.speed.x = 50
 
 
 func _physics_process(delta: float) -> void:
@@ -28,6 +28,8 @@ func calculate_move_velocity(
 		dir: Vector2,
 		speed: Vector2
 	) -> Vector2:
+	   
+		
 	var out: = linear_velocity
 	out.x = speed.x * dir.x
 	out.y += gravity * get_physics_process_delta_time()
