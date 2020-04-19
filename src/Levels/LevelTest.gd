@@ -3,6 +3,7 @@ extends Node
 func _ready():
 	add_to_group("Level")
 	set_camera_limits()
+	get_tree().call_group("AudiostreamPlayer", "change_music")
 	
 
 func set_camera_limits():

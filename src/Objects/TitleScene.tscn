@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/Objects/TitleScene.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/m5x7.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://src/Actors/Enemy_Wasp.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Actors/Enemy_Plant.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Sprites/background_3.png" type="Texture" id=9]
+[ext_resource path="res://src/Objects/AudioStreamPlayer.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Objects/AudioStreamPlayer.gd" type="Script" id=11]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -26,31 +28,31 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 4 )
 region = Rect2( 32, 32, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "default",
 "speed": 1.0
 } ]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 48
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=8]
 size = 32
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=9]
 size = 32
 font_data = ExtResource( 2 )
 
@@ -108,12 +110,12 @@ tile_data = PoolIntArray( 131075, 27, 0, 131076, 27, 0, 131077, 27, 0, 131078, 2
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 239.762, 276.632 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 401, 164.632 )
-frames = SubResource( 10 )
-frame = 1
+frames = SubResource( 6 )
 playing = true
 
 [node name="Label" type="Label" parent="ColorRect"]
@@ -123,7 +125,7 @@ margin_left = -81.0
 margin_top = 63.0
 margin_right = 81.0
 margin_bottom = 101.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.219608, 0.211765, 0.247059, 1 )
 text = "Main Menu"
 align = 1
@@ -149,7 +151,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_top = -13.0
 margin_bottom = 13.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "Let's Begin"
 align = 1
 __meta__ = {
@@ -173,11 +175,14 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_top = -13.0
 margin_bottom = 13.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 text = "Exit"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 10 )]
+script = ExtResource( 11 )
 [connection signal="pressed" from="ColorRect/NewGame" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="ColorRect/Exit" to="." method="_on_Exit_pressed"]
