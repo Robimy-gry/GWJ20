@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Objects/PlayerSpawner.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Levels/Level_2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Levels/Level_3.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Objects/SecretPortal.tscn" type="PackedScene" id=5]
 
 [node name="SecretLvl" type="Node2D"]
@@ -106,4 +106,4 @@ tile_data = PoolIntArray( -65533, 8, 0, -65532, 5, 0, -65531, 8, 0, 0, 4, 0, 1, 
 
 [node name="SecretPortal" parent="." instance=ExtResource( 5 )]
 position = Vector2( 474.705, 419.388 )
-next_scene = ExtResource( 4 )
+next_scene = ExtResource( 3 )
