@@ -76,7 +76,7 @@ position = Vector2( 1664, 80 )
 next_worm_hole_name = "HolePortal"
 
 [node name="WormHole3" parent="WormHoles" instance=ExtResource( 7 )]
-position = Vector2( 1728, 334 )
+position = Vector2( 1728, 336 )
 next_worm_hole_name = "WormHole6"
 
 [node name="WormHole4" parent="WormHoles" instance=ExtResource( 7 )]
