@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/plant.ogg-cafe151255afbad6cf000ea70c8fbcbb.oggstr"
+
+[deps]
+
+source_file="res://Assets/SFX/plant.ogg"
+dest_files=[ "res://.import/plant.ogg-cafe151255afbad6cf000ea70c8fbcbb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

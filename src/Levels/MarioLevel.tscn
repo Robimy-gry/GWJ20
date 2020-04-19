@@ -4,10 +4,13 @@
 [ext_resource path="res://src/Objects/PlayerSpawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Levels/Level_3.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Levels/MarioLevel.gd" type="Script" id=4]
+[ext_resource path="res://src/Objects/AudioStreamPlayer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Objects/SecretPortal.tscn" type="PackedScene" id=5]
 
 [node name="SecretLvl" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 4 )]
 
 [node name="PlayerSpawner" parent="." instance=ExtResource( 2 )]
 position = Vector2( 214.949, 26.3032 )

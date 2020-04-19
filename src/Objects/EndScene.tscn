@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Fonts/m5x7.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://src/Objects/EndScene.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sprites/download.png" type="Texture" id=3]
+[ext_resource path="res://Assets/SFX/main.ogg" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -19,6 +20,10 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -84,10 +89,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -45.8291
-margin_top = -198.168
-margin_right = 531.171
-margin_bottom = 601.832
+margin_left = -40.0
+margin_top = -194.0
+margin_right = 537.0
+margin_bottom = 606.0
 rect_scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 3 )
 __meta__ = {
