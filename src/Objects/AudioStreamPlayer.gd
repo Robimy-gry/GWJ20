@@ -2,7 +2,7 @@ extends AudioStreamPlayer
 
 var humanSFX = "res://Assets/SFX/rolnik.ogg"
 var waspSFX = "res://Assets/SFX/osa_vibrato.ogg"
-var wormSFX = "res://Assets/SFX/worm.ogg"
+var wormSFX = "res://Assets/SFX/robak.ogg"
 var plantSFX = "res://Assets/SFX/plant.ogg"
 
 func _ready() -> void:
