@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Objects/ParallaxBackground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Tiles/Tiles.tres" type="TileSet" id=2]
@@ -7,9 +7,12 @@
 [ext_resource path="res://src/Levels/LevelTest.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Levels/LevelTest.gd" type="Script" id=7]
+[ext_resource path="res://src/Objects/QuoteScene.tscn" type="PackedScene" id=8]
 
 [node name="Level_2" type="Node"]
 script = ExtResource( 7 )
+
+[node name="QuoteScene" parent="." instance=ExtResource( 8 )]
 
 [node name="PlayerSpawner" parent="." instance=ExtResource( 3 )]
 position = Vector2( 512, 488 )
