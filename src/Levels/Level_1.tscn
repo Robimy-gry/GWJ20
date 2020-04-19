@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Objects/PlayerSpawner.tscn" type="PackedScene" id=2]
@@ -11,9 +11,12 @@
 [ext_resource path="res://src/Levels/MarioLevel.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Objects/SecretPortal.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Levels/LevelTest.gd" type="Script" id=11]
+[ext_resource path="res://src/Objects/AudioStreamPlayer.tscn" type="PackedScene" id=12]
 
 [node name="Level_1" type="Node2D"]
 script = ExtResource( 11 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 12 )]
 
 [node name="QuoteScene" parent="." instance=ExtResource( 7 )]
 

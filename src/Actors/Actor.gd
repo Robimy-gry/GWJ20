@@ -33,6 +33,7 @@ func killed_by(body: KinematicBody2D) -> void:
 				get_tree().call_group("Quotes", "show_quote")
 				body.die()
 				die()
+				get_tree().call_group("AudiostreamPlayer", "change_music")
 				break
 	
 
