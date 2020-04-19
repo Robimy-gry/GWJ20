@@ -4,10 +4,11 @@ extends Actor
 func _ready() -> void:
 	add_to_group("Player")
 	get_tree().call_group("Level", "set_camera_limits")
-	self.speed.x = 30
-	self.speed.y = -25
-	self.gravity = 5
+	self.speed.x = 60
+	self.speed.y = -50
+	self.gravity = 20
 	_velocity.y = self.speed.y
+	self.position.y += 16
 
 func _physics_process(delta: float) -> void:
 	var direction: = get_direction() 
