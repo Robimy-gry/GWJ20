@@ -49,5 +49,5 @@ position = Vector2( 2839.9, 479.293 )
 next_scene = ExtResource( 8 )
 
 [node name="SecretPortal" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2388.43, -156.856 )
+position = Vector2( 2389.01, -144 )
 next_scene = ExtResource( 9 )
