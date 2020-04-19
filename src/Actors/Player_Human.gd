@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 	if !is_on_floor():
 		$AnimatedSprite.play("jump")
-	elif _velocity.x != 0:
+	elif (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")) != 0:
 		$AnimatedSprite.play("move")
 	else:
 		$AnimatedSprite.play("idle")
