@@ -12,6 +12,12 @@ func _physics_process(delta: float) -> void:
 	flip_sprite(direction)
 	_velocity = calculate_move_velocity(_velocity,direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	if !is_on_floor():
+		$AnimatedSprite.play("jump")
+	elif _velocity.x != 0:
+		$AnimatedSprite.play("move")
+	else:
+		$AnimatedSprite.play("idle")
 
 
 func get_direction() -> Vector2:
