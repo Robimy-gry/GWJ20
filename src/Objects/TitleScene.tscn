@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Objects/TitleScene.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/m5x7.ttf" type="DynamicFontData" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://src/Actors/Enemy_Plant.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Sprites/background_3.png" type="Texture" id=9]
 [ext_resource path="res://src/Objects/AudioStreamPlayer.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Objects/AudioStreamPlayer.gd" type="Script" id=11]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -93,9 +92,6 @@ __meta__ = {
 [node name="Enemy_Plant" parent="ColorRect" instance=ExtResource( 8 )]
 position = Vector2( 79.7622, 304.632 )
 
-[node name="Enemy_Wasp" parent="ColorRect" instance=ExtResource( 7 )]
-position = Vector2( 175.762, 36.6322 )
-
 [node name="Enemy_Worm" parent="ColorRect" instance=ExtResource( 5 )]
 position = Vector2( 183.762, 396.632 )
 
@@ -116,23 +112,28 @@ playing = true
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 401, 164.632 )
 frames = SubResource( 6 )
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -81.0
-margin_top = 63.0
-margin_right = 81.0
-margin_bottom = 101.0
+margin_left = -128.238
+margin_top = 20.6322
+margin_right = 129.762
+margin_bottom = 99.6322
 custom_fonts/font = SubResource( 7 )
-custom_colors/font_color = Color( 0.219608, 0.211765, 0.247059, 1 )
-text = "Main Menu"
+custom_colors/font_color = Color( 0, 0, 0, 0.976471 )
+text = "Don't Bee Plant,
+always Worm up!"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Enemy_Wasp" parent="ColorRect" instance=ExtResource( 7 )]
+position = Vector2( 175.762, 36.6322 )
 
 [node name="NewGame" type="Button" parent="ColorRect"]
 anchor_left = 0.5
@@ -183,6 +184,5 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 10 )]
-script = ExtResource( 11 )
 [connection signal="pressed" from="ColorRect/NewGame" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="ColorRect/Exit" to="." method="_on_Exit_pressed"]
