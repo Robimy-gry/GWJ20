@@ -7,4 +7,6 @@ func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-			pass
+	if Input.is_action_just_released("reset"):
+		get_tree().reload_current_scene()
+		playerType = "Human"
